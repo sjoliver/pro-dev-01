@@ -1,14 +1,14 @@
-import React from 'react';
+// import React from 'react';
 
-const Fifa = () => {
+// const Fifa = () => {
 
 
-  return (
-    <p>Hello, World!</p>
-  )
-}
+//   return (
+//     <p>Hello, World!</p>
+//   )
+// }
 
-export default Fifa;
+// export default Fifa;
 
 
 
@@ -18,7 +18,7 @@ export default Fifa;
 // import axios from "axios";
 // import React from "react";
 
-// const baseURL = "http://api.cup2022.ir/api/v1/team";
+// const baseURL = "https://api.football-data.org/v4/matches";
 // const access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzhhNjg5M2YyODA5NGFhM2E5ZDY2ODEiLCJpYXQiOjE2NzAwMTY2NjYsImV4cCI6MTY3MDEwMzA2Nn0.6_XeL3v3N_JTeBjbjWG5xIe3IJG45ivb-rfc5A5Hc2k";
 // export default function App() {
 //   const [post, setPost] = React.useState(null);
