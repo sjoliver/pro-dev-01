@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Fifa from './Fifa';
+import Hello from './Hello';
 
 function App() {
   return (
     <>
-      <Fifa />
+      <Hello />
     </>
   );
 }
