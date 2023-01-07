@@ -19,12 +19,12 @@ export default function Home() {
     });
     const data = await response.json();
     setResult(data.result);
+    setResultArr([...resultArr, result]);
     setAnimalInput("");
   }
-  
-  useEffect(()=>{
-    setResultArr([...resultArr, result]);
-  },[result])
+  // useEffect(()=>{
+  //   setResultArr([...resultArr, result]);
+  // },[result])
 
   return (
     <div>
@@ -49,11 +49,10 @@ export default function Home() {
         <div className={styles.result}>{result}</div>
         <div className={styles.feed}>
         <ul>
-          {resultArr?.map((output, i) => (
+          {resultArr?.filter(word => word.length > 0).map((output, i) => (
            <li key={i}>{output}</li>
           ))}
         </ul>
-    
         </div>
       </main>
     </div>
