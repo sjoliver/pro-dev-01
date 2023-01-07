@@ -92,3 +92,7 @@ margin-bottom: 24px;
   margin-top: 48px;
   height: 100%;
 }
+.feed ul {
+  list-style: none;
+  padding: 0;
+}
