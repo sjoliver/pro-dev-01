@@ -1,11 +1,13 @@
 import Head from "next/head";
-import { useState } from "react";
+import Page from "./pages"
+import Feed from "../components/feed"
+import { useState, useEffect } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
-  const [result, setResult] = useState();
-
+  const [result, setResult] = useState("");
+  const [resultArr, setResultArr] = useState([]); 
   async function onSubmit(event) {
     event.preventDefault();
     const response = await fetch("/api/generate", {
@@ -19,6 +21,10 @@ export default function Home() {
     setResult(data.result);
     setAnimalInput("");
   }
+  
+  useEffect(()=>{
+    setResultArr([...resultArr, result]);
+  },[result])
 
   return (
     <div>
@@ -27,9 +33,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
+        <Page />
         <h3>Name my pet</h3>
-        <img src="/placeholder.png" className={styles.icon} />
+        {/* <img src="/placeholder.png" className={styles.icon} /> */}
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -41,6 +47,14 @@ export default function Home() {
           <input type="submit" value="Generate names" />
         </form>
         <div className={styles.result}>{result}</div>
+        <div className={styles.feed}>
+        <ul>
+          {resultArr?.map((output, i) => (
+           <li key={i}>{output}</li>
+          ))}
+        </ul>
+    
+        </div>
       </main>
     </div>
   );
