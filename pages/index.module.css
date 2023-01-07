@@ -13,7 +13,11 @@
   font-weight: bold;
   font-style: normal;
 }
-.links, .links ul{
+.links {
+  margin-bottom: 24px;
+}
+.links,
+.links ul {
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -22,12 +26,12 @@
   padding: 0;
 }
 .links a {
-text-decoration: none;
-color: darkcyan;
+  text-decoration: none;
+  color: darkcyan;
 }
 .links a:hover {
   color: red;
-} 
+}
 
 .main,
 .main input {
@@ -42,17 +46,17 @@ color: darkcyan;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 .main .icon {
   width: 34px;
-margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 .main h3 {
+  margin: 0;
   font-size: 32px;
   line-height: 40px;
   font-weight: bold;
-  margin-bottom: 24px;
   color: #353740;
   font-family: "ColfaxAI", Helvetica, sans-serif;
 }
@@ -65,6 +69,7 @@ margin-bottom: 24px;
   padding: 12px 16px;
   border: 1px solid grey;
   border-radius: 4px;
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 .main ::placeholder {
@@ -88,7 +93,7 @@ margin-bottom: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:16px;
+  gap: 16px;
   margin-top: 48px;
   height: 100%;
 }
